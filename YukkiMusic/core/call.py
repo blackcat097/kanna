@@ -191,12 +191,6 @@ class Call(PyTgCalls):
                     pass
                 except Exception as e:
                     raise AssistantErr(_["call_3"].format(e))
-            botstatus = await app.get_chat_member(chat_id, app.id)
-            if botstatus.status == "administrator":
-                if botstatus.can_restrict_members:
-                    raise AssistantErr(_["call_7"])
-                if botstatus.can_promote_members:
-                    raise AssistantErr(_["call_8"])
 
     async def join_call(
         self,
@@ -251,7 +245,7 @@ class Call(PyTgCalls):
                 loop = loop - 1
                 await set_loop(chat_id, loop)
             if popped:
-                if config.AUTO_DOWNLOADS_CLEAR:
+                if config.AUTO_DOWNLOADS_CLEAR == str(True):
                     await auto_clean(popped)
             if not check:
                 await _clear_(chat_id)
