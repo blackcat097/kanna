@@ -1,6 +1,5 @@
 from pyrogram import filters
-from pyrogram.types import InlineKeyboardMarkup,
-Message
+from pyrogram.types import InlineKeyboardMarkup, Message
 
 import config
 from config import BANNED_USERS
