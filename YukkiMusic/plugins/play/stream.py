@@ -27,10 +27,12 @@ async def stream_command(
     video,
     channel,
     playmode,
-    mystic,
     url,
 ):
     if url:
+        mystic = await message.reply_text(
+            _["play_2"].format(channel) if channel else _["play_1"]
+        )
         try:
             await Yukki.stream_call(url)
         except NoActiveGroupCall:
