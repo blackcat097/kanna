@@ -39,9 +39,11 @@ async def play_commnd(
     video,
     channel,
     playmode,
-    mystic,
     url,
 ):
+    mystic = await message.reply_text(
+        _["play_2"].format(channel) if channel else _["play_1"]
+    )
     plist_id = None
     slider = None
     plist_type = None
@@ -203,6 +205,8 @@ async def play_commnd(
                 cap = _["play_12"].format(
                     message.from_user.first_name
                 )
+            else:
+                return await mystic.edit_text(_["play_16"])
         elif await Apple.valid(url):
             if "album" in url:
                 try:
@@ -225,11 +229,12 @@ async def play_commnd(
                     message.from_user.first_name
                 )
                 img = url
+            else:
+                return await mystic.edit_text(_["play_16"])
         elif await Resso.valid(url):
             try:
                 details, track_id = await Resso.track(url)
             except Exception as e:
-                print(e)
                 return await mystic.edit_text(_["play_3"])
             streamtype = "youtube"
             img = details["thumb"]
