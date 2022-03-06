@@ -218,7 +218,7 @@ welcome_group = 2
 @app.on_message(filters.new_chat_members, group=welcome_group)
 async def welcome(client, message: Message):
     chat_id = message.chat.id
-    if config.PRIVATE_BOT_MODE:
+    if config.PRIVATE_BOT_MODE: == str(True):
         if not await is_served_private_chat(message.chat.id):
             await message.reply_text(
                 "**ᴛʜɪs ʙᴏᴛ ɪs ᴘʀɪᴠᴀᴛᴇ​**\n\nᴛʜɪs ʙᴏᴛ ᴄᴀɴ ᴏɴʟʏ ʙᴇ ᴜsᴇᴅ ɪɴ ᴀᴜᴛʜᴏʀɪᴢᴇᴅ ᴄʜᴀᴛs​. ɢᴏ ᴛᴏ ᴏᴡɴᴇʀ ᴅᴍ ᴀɴᴅ ᴅɪsᴛᴜʀʙ ʜɪᴍ ꜰᴏʀ ᴀʟʟᴏᴡɪɴɢ ʏᴏᴜʀ ᴄʜᴀᴛ​. 🥱"
