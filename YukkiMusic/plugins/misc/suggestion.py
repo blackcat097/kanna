@@ -281,7 +281,7 @@ async def dont_do_this():
         except:
             pass
         try:
-            if config.AUTO_SUGGESTION_MODE: == str(True):
+            if config.AUTO_SUGGESTION_MODE == str(True):
                 chats = []
                 schats = await get_served_chats()
                 for chat in schats:
