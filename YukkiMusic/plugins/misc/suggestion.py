@@ -177,7 +177,7 @@ suggestor = {}
 async def dont_do_this():
     while not await asyncio.sleep(LEAVE_TIME):
         try:
-            if config.AUTO_LEAVING_ASSISTANT: == str(True):
+            if config.AUTO_LEAVING_ASSISTANT == str(True):
                 if config.STRING1:
                     async for i in userbot.one.iter_dialogs():
                         chat_type = i.chat.type
