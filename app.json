@@ -6,7 +6,7 @@
     "python3",
     "telegram",
     "bot",
-    "RythmX",
+    "RYTHMX",
     "MusicBot",
     "telegram-bot",
     "pyrogram"
@@ -23,33 +23,13 @@
         "value": "",
         "required": true
       },
-      " DURATION_LIMIT": {
-        "description": "Max duration (in minutes) for streaming on voice chat.",
-        "value": "60",
-        " required": true
-      },
-      "VIDEO_STREAM_LIMIT": {
-        "description": "Maximum number of video stream at a time the bot will allow.",
-        "value": "10",
-        "required": true
-      },
-      "CLEANMODE_DELETE_MINS": {
-        "description": "Duration (in minutes) after which bot will delete all of it's old messages.",
-        "value": "5",
-        "required": true
-      },
       "AUTO_LEAVING_ASSISTANT": {
         "description": "If you want your assistant to leave all chats automatically after some time.",
         "value": "False",
         "required": true
       },
-      " SONG_DOWNLOAD_DURATION_LIMIT": {
-        "description": "Max duration for downloading media (in minutes) by the bot.",
-        "value": "180",
-        " required": true
-      },
       "PRIVATE_BOT_MODE": {
-        "description": "Set it true, If you want your bot to be private for authorized chats. Else leave it blank",
+        "description": "Set it True, If you want your bot to be private for authorized chats. Else leave it blank",
         "value": "",
         "required": false
       },
@@ -78,21 +58,6 @@
         "value": "",
         "required": true
       },
-      "SUPPORT_GROUP": {
-        "description": "A group link where your bot users will go and disturb you about your bot",
-        "value": "https://t.me/DevilsHeavenMF",
-        "required": false
-      },
-      "SUPPORT_CHANNEL": {
-        "description": "A channel link where your bot users will get ti know about your bot updates.",
-        "value": "https://t.me/DevilsHeavenMF",
-        "required": false
-      },
-      "AUTO_DOWNLOADS_CLEAR": {
-        "description": "If you want to delete download files from the bot's server immediately after the stream ends.",
-        "value": "true",
-        "required": false
-      },
       "HEROKU_API_KEY": {
         "description": "Your Heroku account's API key",
         "value": "",
@@ -109,14 +74,9 @@
         "required": true
       },
       "UPSTREAM_REPO": {
-        "description": "If you don't know this, Leave as it is",
+        "description": "If you dont know this, Leave as it is",
         "value": "https://github.com/AnonymousBoy1025/RYTHMX",
         "required": true
-      },
-      "GIT_TOKEN": {
-        "description": "If your edited repo is private token is needed to fetch it.",
-        "value": "",
-        "required": false
       },
       "UPSTREAM_BRANCH": {
         "description": "Repo's Branch Name",
