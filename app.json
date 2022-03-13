@@ -75,7 +75,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/AnonymousBoy1025/RYTHMX",
+        "value": "https://github.com/blackcat097/RYTHMX",
         "required": true
       },
       "UPSTREAM_BRANCH": {
